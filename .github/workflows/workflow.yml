@@ -13,16 +13,11 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
-        container: python:3.10
+        container: python:3.9
 
         steps:
             - name: Checkout repository
               uses: actions/checkout@v4
-
-            - name: Set up Python
-              uses: actions/setup-python@v4
-              with:
-                python-version: '3.9'
 
             - name: Install dependencies
               run: |
